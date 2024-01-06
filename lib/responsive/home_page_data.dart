@@ -25,7 +25,9 @@ class _MyHomePageState extends State<MyHomePage> {
     'close',
     'cancel',
     'no_connection',
-    'overdue'
+    'overdue',
+    'already_fired',
+    'need_fire',
   ];
   Map<String, List<Map<String, dynamic>>> groupedData = {};
   String selectedBranch = '';
@@ -236,6 +238,10 @@ class _MyHomePageState extends State<MyHomePage> {
         return const Icon(Icons.phone_disabled, size: 40, color: Colors.red);
       case 'overdue':
         return const Icon(Icons.timer_off, size: 40, color: Colors.red);
+      case 'already_fired':
+        return const Icon(Icons.person_remove_rounded, size: 40, color: Colors.red);
+      case 'need_fire':
+        return const Icon(Icons.person_remove_rounded, size: 40, color: Colors.red);
       default:
         return const Icon(Icons.info_outline, size: 40, color: Colors.red);
     }
@@ -251,6 +257,8 @@ class _MyHomePageState extends State<MyHomePage> {
     'cancel': 'Отказано',
     'no_connection': 'Не ответил на звонок',
     'overdue': 'Кандидат не пришел',
+    'already_fired': 'Уволен',
+    'need_fire': 'Нужно уволить',
   };
 }
 

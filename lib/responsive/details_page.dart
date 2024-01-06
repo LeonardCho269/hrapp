@@ -27,6 +27,8 @@ class _DetailPageState extends State<DetailPage> {
     MapEntry('cancel', 'Отказано'),
     MapEntry('no_connection', 'Не ответил на звонок'),
     MapEntry('overdue', 'Кандидат не пришел'),
+    MapEntry('already_fired', 'Уволен'),
+    MapEntry('need_fire', 'Уволить'),
   ];
 
   late ApiService apiService;
@@ -51,8 +53,7 @@ class _DetailPageState extends State<DetailPage> {
         statusUpdated = true;
       });
     } catch (e) {
-      if (e is DioException) {
-      }
+      if (e is DioException) {}
     }
   }
 
